@@ -15,7 +15,7 @@ def find_similar(query, records, top_k=3):
     documents = [
         " ".join(
             str(record.get(k, ""))
-            for k in ("title", "content", "component", "resolution")
+            for k in ("title", "content", "description", "component", "resolution")
         )
         for record in records
     ]

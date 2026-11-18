@@ -1,6 +1,6 @@
-__pycache__/
-*.py[cod]
 .venv/
-.env
-.pytest_cache/
+.venv312/
+__pycache__/
+*.pyc
+data/chroma_db/
 data/submissions.db
