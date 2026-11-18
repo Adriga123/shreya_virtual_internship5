@@ -15,9 +15,8 @@ collection = client.get_collection("bug_knowledge_base")
 print("Loading embedding model...")
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# Test query: Apache Hadoop
-query = "Hadoop slow RPC logging should include user information and caller context"
-
+# Test query: Mozilla Firefox
+query = "Firefox browser crashes when opening a new tab"
 print("\nSearch Query:", query)
 
 # Convert query into embedding
@@ -38,7 +37,6 @@ for i in range(len(results["ids"][0])):
 
     print("Bug ID:", results["metadatas"][0][i].get("bug_id"))
     print("Project:", results["metadatas"][0][i].get("project"))
-    print("Full metadata:", results["metadatas"][0][i])
     print("Title:", results["documents"][0][i])
     print("Distance:", results["distances"][0][i])
 
