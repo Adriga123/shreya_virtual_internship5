@@ -92,6 +92,6 @@ st.divider()
 st.subheader("Recent submissions")
 history = list_reports()
 if history:
-    st.dataframe(history, use_container_width=True, hide_index=True)
+    st.json(history)
 else:
     st.info("No reports submitted yet.")
